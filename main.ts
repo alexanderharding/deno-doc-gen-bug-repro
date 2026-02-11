@@ -11,6 +11,9 @@ export interface ExampleConstructor {
   new (a: number): Example;
 }
 
+/**
+ * Object type for the example
+ */
 export interface Example {
   a: number;
 }
