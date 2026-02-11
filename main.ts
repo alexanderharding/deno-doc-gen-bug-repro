@@ -25,4 +25,4 @@ export const Example: ExampleConstructor = class {
   }
 };
 
-new Example(1);
+const e: Example = new Example(1);
