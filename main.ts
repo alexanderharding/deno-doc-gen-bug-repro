@@ -1,12 +1,25 @@
 export interface ExampleConstructor {
   /**
    * Example constructor
-   * @param {number} a - The first number
-   * @returns {object} - The example object
+   * @param a The first number
+   * @returns The example object
    * @example
    * ```ts
-   * const example = new ExampleConstructor(1);
+   * const example = new Example(1);
    * ```
    */
-  new (a: number): object;
+  new (a: number): Example;
 }
+
+export interface Example {
+  a: number;
+}
+
+export const Example: ExampleConstructor = class {
+  public a: number;
+  constructor(a: number) {
+    this.a = a;
+  }
+};
+
+new Example(1);
